@@ -1,0 +1,23 @@
+{
+  "name": "team-profile-generator",
+  "version": "0.0.1",
+  "description": "CLI tool to programatically generate a team profile .html file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magiama9/refactored-potato.git"
+  },
+  "author": "Sam Randels",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magiama9/refactored-potato/issues"
+  },
+  "homepage": "https://github.com/magiama9/refactored-potato#readme",
+  "dependencies": {
+    "inquirer": "^7.0.4",
+    "jest": "^25.1.0"
+  }
+}
