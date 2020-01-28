@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
 const employee = require("./lib/employees");
+const htmlgen = require("./lib/htmlgenerator");
 
 let testEmployee = new employee.Manager("Sam", "001", "Bossman", "UVA");
 
@@ -138,7 +139,7 @@ const addManager = () => {
     );
     console.log(manager);
     console.log("Great! Let's start adding engineers to your team!");
-    addEngineers();
+    addEngineers(); // Begins running through engineer adding
   });
 };
 
@@ -158,10 +159,10 @@ const addEngineers = () => {
     engineerCount++;
     console.log(engineerArray);
     if (answers.add === true) {
-      addEngineers();
+      addEngineers(); // Loops back through if they decide to add another engineer
     } else {
       console.log("You're done adding engineers. Let's add some interns!");
-      addInterns();
+      addInterns(); // Begins adding interns
     }
   });
 };
@@ -181,7 +182,7 @@ const addInterns = () => {
     internCount++;
     console.log(internArray);
     if (answers.add === true) {
-      addInterns();
+      addInterns(); // Loops back through if they decide to add another intern
     } else console.log("You're done creating your team!");
   });
 };

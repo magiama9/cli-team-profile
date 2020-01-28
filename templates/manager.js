@@ -1,4 +1,4 @@
-exports.Manager = `<div class="col-12">
+exports.Manager = `
   <div class="card text-center">
     <div class="card-header">
       Project Manager
@@ -15,5 +15,4 @@ exports.Manager = `<div class="col-12">
       <!-- Office Number -->
       </p>
     </div>
-  </div>
-</div>`;
+  </div>`;

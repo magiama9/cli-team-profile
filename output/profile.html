@@ -1,12 +1,4 @@
-const manager = require("./manager");
-const intern = require("./intern");
-const engineer = require("./engineer");
-
-let managerCard = manager.Manager;
-let internCards = intern.Intern;
-let engineerCards = engineer.Engineer;
-
-exports.Template = `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -37,20 +29,72 @@ exports.Template = `<!DOCTYPE html>
       <div class="row no-gutters">
         <div class="col-12">
           <!-- Manager Area -->
-          ${managerCard}
+          
+  <div class="card text-center">
+    <div class="card-header">
+      Project Manager
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><!-- Manager Name--></h5>
+      <p class="card-text">
+        <!-- Manager ID -->
+      </p>
+      <p class="card-text">
+        <!-- Manager email -->
+      </p>
+      <p class="card-text">
+      <!-- Office Number -->
+      </p>
+    </div>
+  </div>
         </div>
       </div>
       <div class="row">
         <div class="col-6">
           <div class="row">
             <!-- Engineer Row -->
-            ${engineerCards}
+            <div class="col-6">
+  <div class="card text-center">
+    <div class="card-header">
+      Engineer
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><!-- Engineer Name--></h5>
+      <p class="card-text">
+        <!-- Engineer ID -->
+      </p>
+      <p class="card-text">
+        <!-- Engineer email -->
+      </p>
+      <!-- Link to Github -->
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
           </div>
         </div>
         <div class="col-6">
           <div class="row">
             <!-- Intern Row -->
-            ${internCards}
+            <div class="col-6">
+  <div class="card text-center">
+    <div class="card-header">
+      Intern
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><!-- Intern Name--></h5>
+      <p class="card-text">
+        <!-- Intern ID -->
+      </p>
+      <p class="card-text">
+        <!-- Intern email -->
+      </p>
+      <p class="card-text">
+        <!-- Intern school -->
+      </p>
+    </div>
+  </div>
+</div>
           </div>
         </div>
       </div>
@@ -74,4 +118,4 @@ exports.Template = `<!DOCTYPE html>
       crossorigin="anonymous"
     ></script>
   </body>
-</html>`;
+</html>
