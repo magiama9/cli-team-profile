@@ -1,4 +1,4 @@
-`<!DOCTYPE html>
+exports.Template = `<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -63,4 +63,4 @@
       crossorigin="anonymous"
     ></script>
   </body>
-</html>`
+</html>`;

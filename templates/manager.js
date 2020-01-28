@@ -1,4 +1,4 @@
-`<div class="col-12">
+exports.Manager = `<div class="col-12">
   <div class="card text-center">
     <div class="card-header">
       Project Manager
@@ -16,4 +16,4 @@
       </p>
     </div>
   </div>
-</div>`
+</div>`;

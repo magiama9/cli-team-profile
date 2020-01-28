@@ -1,4 +1,4 @@
-`<div class="col-6">
+exports.Intern = `<div class="col-6">
   <div class="card text-center">
     <div class="card-header">
       Intern

@@ -1,4 +1,4 @@
-`<div class="col-6">
+exports.Engineer = `<div class="col-6">
   <div class="card text-center">
     <div class="card-header">
       Engineer
@@ -15,4 +15,4 @@
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
-</div>`
+</div>`;
