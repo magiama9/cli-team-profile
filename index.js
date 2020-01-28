@@ -41,7 +41,9 @@ const managerQuestions = [
     name: "email"
   },
   {
-    
+    type: "input",
+    message: "What is your office number?",
+    name: "office"
   }
 ];
 
@@ -131,6 +133,8 @@ const addManager = () => {
       answers.email,
       answers.office
     );
+    console.log("Great! Let's start adding engineers to your team!")
+    addEngineers();
   });
 };
 
@@ -170,8 +174,8 @@ const addInterns = () => {
     internArray.push(intern);
     if (answers.add === true) {
       addInterns();
-    } else console.log("You're done adding interns!");
+    } else console.log("You're done creating your team!");
   });
 };
 
-addEngineers();
+initialize();
