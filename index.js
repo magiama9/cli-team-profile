@@ -1,8 +1,8 @@
 const inquirer = require("inquirer");
 const employee = require("./lib/employees");
-const htmlgen = require("./lib/htmlgenerator");
+// const htmlgen = require("./lib/htmlgenerator");
 
-let testEmployee = new employee.Manager("Sam", "001", "Bossman", "UVA");
+ let testEmployee = new employee.Manager("Sam", "001", "Bossman", "UVA");
 
 // Array for storing engineer employees
 let engineerArray = [];
