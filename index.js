@@ -48,6 +48,12 @@ const managerQuestions = [
     type: "input",
     message: "What is your office number?",
     name: "office"
+  },
+  {
+    type: "list",
+    message: "Would you like to start adding interns or engineers?",
+    choices: ["Interns", "Engineers"],
+    name: "addNext"
   }
 ];
 
@@ -78,10 +84,10 @@ const internQuestions = [
     name: "school"
   },
   {
-    // Check to see if you want to add more
-    type: "confirm",
-    message: "Would you like to add another intern?",
-    name: "add"
+    type: "list",
+    message: "Would you like to add more interns or engineers?",
+    choices: ["Interns", "Engineers", "The team is complete"],
+    name: "addNext"
   }
 ];
 
@@ -139,7 +145,9 @@ const addManager = () => {
     );
     console.log(manager);
     console.log("Great! Let's start adding engineers to your team!");
-    addEngineers(); // Begins running through engineer adding
+    if (answers.addNext === "Engineers") {
+      addEngineers(); // Begins running through engineer adding
+    } else addInterns(); // Begins running through intern adding
   });
 };
 
@@ -158,12 +166,11 @@ const addEngineers = () => {
     engineerArray.push(engineer);
     engineerCount++;
     console.log(engineerArray);
-    if (answers.add === true) {
+    if (answers.addNext === "Engineers") {
       addEngineers(); // Loops back through if they decide to add another engineer
-    } else {
-      console.log("You're done adding engineers. Let's add some interns!");
+    } else if (answers.addNext === "Interns") {
       addInterns(); // Begins adding interns
-    }
+    } else console.log("You're done creating your team!");
   });
 };
 
@@ -181,7 +188,9 @@ const addInterns = () => {
     internArray.push(intern);
     internCount++;
     console.log(internArray);
-    if (answers.add === true) {
+    if (answers.addNext === "Engineers") {
+      addEngineers(); // Adds another engineer
+    } else if (answers.addNext === "Interns") {
       addInterns(); // Loops back through if they decide to add another intern
     } else console.log("You're done creating your team!");
   });
