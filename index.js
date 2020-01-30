@@ -117,10 +117,10 @@ const engineerQuestions = [
     name: "github"
   },
   {
-    // Check to see if you want to add more
-    type: "confirm",
-    message: "Would you like to add another engineer?",
-    name: "add"
+    type: "list",
+    message: "Would you like to add more interns or engineers?",
+    choices: ["Interns", "Engineers", "The team is complete"],
+    name: "addNext"
   }
 ];
 
