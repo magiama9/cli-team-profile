@@ -3,15 +3,13 @@ const employee = require("./lib/employees");
 const questions = require("./lib/questions");
 // const htmlgen = require("./lib/htmlgenerator");
 
- let testEmployee = new employee.Manager("Sam", "001", "Bossman", "UVA");
+let testEmployee = new employee.Manager("Sam", "001", "Bossman", "UVA");
 
 // Array for storing engineer employees
 let engineerArray = [];
-let engineerCount = 0; // Increased each time addEngineer() is called
 
 // Array for storing interns
 let internArray = [];
-let internCount = 0; // Increased each time addIntern() is called
 
 // Object to store manager
 let manager;
@@ -36,7 +34,7 @@ const addManager = () => {
       answers.office
     );
     console.log(manager);
-    console.log("Great! Let's start adding engineers to your team!");
+    console.log(`Great! Let's start adding ${answers.addNext} to your team!`);
     if (answers.addNext === "Engineers") {
       addEngineers(); // Begins running through engineer adding
     } else addInterns(); // Begins running through intern adding
@@ -56,13 +54,8 @@ const addEngineers = () => {
 
     // Pushes the new engineer object to the storage array
     engineerArray.push(engineer);
-    engineerCount++;
     console.log(engineerArray);
-    if (answers.addNext === "Engineers") {
-      addEngineers(); // Loops back through if they decide to add another engineer
-    } else if (answers.addNext === "Interns") {
-      addInterns(); // Begins adding interns
-    } else console.log("You're done creating your team!");
+    next(answers.addNext);
   });
 };
 
@@ -78,14 +71,26 @@ const addInterns = () => {
 
     // Pushes the new intern object to the storage array
     internArray.push(intern);
-    internCount++;
     console.log(internArray);
-    if (answers.addNext === "Engineers") {
-      addEngineers(); // Adds another engineer
-    } else if (answers.addNext === "Interns") {
-      addInterns(); // Loops back through if they decide to add another intern
-    } else console.log("You're done creating your team!");
+    next(answers.addNext);
   });
+};
+
+const next = str => {
+  switch (str) {
+    case "Engineer":
+      console.log("Great! Let's add an engineer to the team.");
+      addEngineers();
+      break;
+    case "Intern":
+      console.log("Great! Let's add an intern to the team.");
+      addInterns();
+      break;
+    default:
+      console.log(
+        "Thank you for completing your team! Your team profile is available in /outputs/team.txt"
+      );
+  }
 };
 
 initialize();
