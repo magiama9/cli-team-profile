@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
 const employee = require("./lib/employees");
+const questions = require("./lib/questions");
 // const htmlgen = require("./lib/htmlgenerator");
 
  let testEmployee = new employee.Manager("Sam", "001", "Bossman", "UVA");
@@ -15,117 +16,8 @@ let internCount = 0; // Increased each time addIntern() is called
 // Object to store manager
 let manager;
 
-// Initialization Question
-const initialQuestion = [
-  {
-    type: "confirm",
-    name: "boss",
-    message: "Are you the manager of this project?"
-  }
-];
-
-// questions array called for manager
-const managerQuestions = [
-  {
-    // Manager Name
-    type: "input",
-    message: "What is your name?",
-    name: "name"
-  },
-  {
-    // Manager ID
-    type: "input",
-    message: "What is your employee ID",
-    name: "id"
-  },
-  {
-    // Manager Email
-    type: "input",
-    message: "What is your email?",
-    name: "email"
-  },
-  {
-    type: "input",
-    message: "What is your office number?",
-    name: "office"
-  },
-  {
-    type: "list",
-    message: "Would you like to start adding interns or engineers?",
-    choices: ["Interns", "Engineers"],
-    name: "addNext"
-  }
-];
-
-// Questions array called for interns
-const internQuestions = [
-  {
-    // Intern Name
-    type: "input",
-    message: "What is this intern's name?",
-    name: "name"
-  },
-  {
-    // Intern ID
-    type: "input",
-    message: "What is their employee ID",
-    name: "id"
-  },
-  {
-    // Intern ID
-    type: "input",
-    message: "What is their email?",
-    name: "email"
-  },
-  {
-    // Intern School
-    type: "input",
-    message: "Where did this intern go to school?",
-    name: "school"
-  },
-  {
-    type: "list",
-    message: "Would you like to add more interns or engineers?",
-    choices: ["Interns", "Engineers", "The team is complete"],
-    name: "addNext"
-  }
-];
-
-const engineerQuestions = [
-  {
-    // Engineer Name
-    type: "input",
-    message: "What is this engineer's name?",
-    name: "name"
-  },
-  {
-    // Engineer ID
-    type: "input",
-    message: "What is their employee ID",
-    name: "id"
-  },
-  {
-    // Engineer ID
-    type: "input",
-    message: "What is their email?",
-    name: "email"
-  },
-  {
-    // Engineer Github
-    type: "input",
-    message: "What is this engineer's github username?",
-    name: "github"
-  },
-  {
-    type: "list",
-    message: "Would you like to add more interns or engineers?",
-    choices: ["Interns", "Engineers", "The team is complete"],
-    name: "addNext"
-  }
-];
-
 const initialize = () => {
-  inquirer.prompt(initialQuestion).then(answers => {
+  inquirer.prompt(questions.initial).then(answers => {
     if (answers.boss === true) {
       addManager();
     } else {
@@ -135,7 +27,7 @@ const initialize = () => {
   });
 };
 const addManager = () => {
-  inquirer.prompt(managerQuestions).then(answers => {
+  inquirer.prompt(questions.manager).then(answers => {
     // Sets the new manager object using user input
     manager = new employee.Manager(
       answers.name,
@@ -152,7 +44,7 @@ const addManager = () => {
 };
 
 const addEngineers = () => {
-  inquirer.prompt(engineerQuestions).then(answers => {
+  inquirer.prompt(questions.engineer).then(answers => {
     // Creates a new engineer object using user input
 
     let engineer = new employee.Engineer(
@@ -175,7 +67,7 @@ const addEngineers = () => {
 };
 
 const addInterns = () => {
-  inquirer.prompt(internQuestions).then(answers => {
+  inquirer.prompt(questions.intern).then(answers => {
     // Creates a new intern object using user input
     let intern = new employee.Intern(
       answers.name,
