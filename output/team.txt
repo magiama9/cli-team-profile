@@ -1,7 +1,21 @@
 ____________________________________________________________
 Title: "Manager" 
 Name: Sam 
-Employee ID: 001 
+Employee ID: 1 
 Email: Bossman 
 Office Number: UVA
+________________________________________________________________________________________________________________________
+
+Title: "Engineer" 
+Name: Bob 
+Employee ID: 2 
+Email: eng@com.com 
+Office Number: magiama9
+________________________________________________________________________________________________________________________
+
+Title: "Engineer" 
+Name: Bob 
+Employee ID: 2 
+Email: eng@com.com 
+Office Number: magiama9
 ____________________________________________________________
