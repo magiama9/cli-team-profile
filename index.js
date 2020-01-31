@@ -1,9 +1,10 @@
 const inquirer = require("inquirer");
 const employee = require("./lib/employees");
 const questions = require("./lib/questions");
+const output = require("./lib/output");
 // const htmlgen = require("./lib/htmlgenerator");
-
 let testEmployee = new employee.Manager("Sam", "001", "Bossman", "UVA");
+output(testEmployee);
 
 // Array for storing engineer employees
 let engineerArray = [];
