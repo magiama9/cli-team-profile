@@ -1,21 +1,35 @@
 ____________________________________________________________
 Title: "Manager" 
 Name: Sam 
-Employee ID: 1 
-Email: Bossman 
-Office Number: UVA
+Employee ID: 001 
+Email: sam@samrandels.io 
+Office Number: 001
 ________________________________________________________________________________________________________________________
 
 Title: "Engineer" 
-Name: Bob 
-Employee ID: 2 
-Email: eng@com.com 
-Github: magiama9
+Name: May 
+Employee ID: 004 
+Email: may@hitchings.com 
+Github: mhitch
 ________________________________________________________________________________________________________________________
 
 Title: "Intern" 
-Name: Bob 
-Employee ID: 2 
-Email: eng@com.com 
-Alma Mater: UVA
+Name: Dan 
+Employee ID: 002 
+Email: dan@dan.com 
+Alma Mater: nowhere
+________________________________________________________________________________________________________________________
+
+Title: "Intern" 
+Name: Erik 
+Employee ID: 003 
+Email: erik@erik.com 
+Alma Mater: nowhere
+________________________________________________________________________________________________________________________
+
+Title: "Intern" 
+Name: katie 
+Employee ID: 005 
+Email: katie@katieHolmes.com 
+Alma Mater: hahvahd
 ____________________________________________________________

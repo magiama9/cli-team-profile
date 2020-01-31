@@ -11,9 +11,9 @@ let testEngineer2 = new employee.Engineer(
   "eng@com.com",
   "magiama9"
 );
-output.manager(testEmployee);
-output.engineers([testEngineer2]);
-output.interns([testIntern]);
+// output.manager(testEmployee);
+// output.engineers([testEngineer2]);
+// output.interns([testIntern]);
 
 // Array for storing engineer employees
 let engineerArray = [];
@@ -43,7 +43,6 @@ const addManager = () => {
       answers.email,
       answers.office
     );
-    console.log(manager);
     console.log(`Great! Let's start adding ${answers.addNext} to your team!`);
     if (answers.addNext === "Engineers") {
       addEngineers(); // Begins running through engineer adding
@@ -54,17 +53,14 @@ const addManager = () => {
 const addEngineers = () => {
   inquirer.prompt(questions.engineer).then(answers => {
     // Creates a new engineer object using user input
-
     let engineer = new employee.Engineer(
       answers.name,
       answers.id,
       answers.email,
       answers.github
     );
-
     // Pushes the new engineer object to the storage array
     engineerArray.push(engineer);
-    console.log(engineerArray);
     next(answers.addNext);
   });
 };
@@ -78,10 +74,8 @@ const addInterns = () => {
       answers.email,
       answers.school
     );
-
     // Pushes the new intern object to the storage array
     internArray.push(intern);
-    console.log(internArray);
     next(answers.addNext);
   });
 };
@@ -97,6 +91,10 @@ const next = str => {
       addInterns();
       break;
     default:
+      // Once they are done adding to the team, runs the output functions
+      output.manager(manager);
+      output.engineers(engineerArray);
+      output.interns(internArray);
       console.log(
         "Thank you for completing your team! Your team profile is available in /outputs/team.txt"
       );
