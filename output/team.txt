@@ -10,12 +10,12 @@ Title: "Engineer"
 Name: Bob 
 Employee ID: 2 
 Email: eng@com.com 
-Office Number: magiama9
+Github: magiama9
 ________________________________________________________________________________________________________________________
 
-Title: "Engineer" 
+Title: "Intern" 
 Name: Bob 
 Employee ID: 2 
 Email: eng@com.com 
-Office Number: magiama9
+Alma Mater: UVA
 ____________________________________________________________

@@ -4,7 +4,7 @@ const questions = require("./lib/questions");
 const output = require("./lib/output");
 // const htmlgen = require("./lib/htmlgenerator");
 let testEmployee = new employee.Manager("Sam", 001, "Bossman", "UVA");
-let testEngineer = new employee.Engineer("Bob", 002, "eng@com.com", "magiama9");
+let testIntern = new employee.Intern("Bob", 002, "eng@com.com", "UVA");
 let testEngineer2 = new employee.Engineer(
   "Bob",
   002,
@@ -12,7 +12,8 @@ let testEngineer2 = new employee.Engineer(
   "magiama9"
 );
 output.manager(testEmployee);
-output.engineers([testEngineer, testEngineer2]);
+output.engineers([testEngineer2]);
+output.interns([testIntern]);
 
 // Array for storing engineer employees
 let engineerArray = [];
