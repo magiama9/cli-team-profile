@@ -4,6 +4,9 @@ Repo to hold CLI tool to generate team profile
 
 
 ## About This Tool
+
+![Demo Gif](https://github.com/magiama9/refactored-potato/blob/master/assets/demo-gif.gif)
+
 This is a CLI tool for programatticaly generating an text file log for a development team. A user is able to create a team of any size and any composition of engineers and interns. The resultant text output is formatted Manager -> Engineers -> Interns regardless of the order in which the user adds people to the team.
 
 ## Technological
