@@ -13,6 +13,7 @@ let internArray = [];
 // Object to store manager
 let manager;
 
+// Initializes the app running
 const initialize = () => {
   inquirer.prompt(questions.initial).then(answers => {
     if (answers.boss === true) {
@@ -23,6 +24,8 @@ const initialize = () => {
     }
   });
 };
+
+// Function to add Manager
 const addManager = () => {
   inquirer.prompt(questions.manager).then(answers => {
     // Sets the new manager object using user input
@@ -30,15 +33,17 @@ const addManager = () => {
       answers.name,
       answers.id,
       answers.email,
-      answers.office
+      answers.office // Unique to manager
     );
-    console.log(`Great! Let's start adding ${answers.addNext} to your team!`);
+    console.log(`Great! Let's start adding ${answers.addNext} to your team!`); 
+    // User can add interns or engineers in any order
     if (answers.addNext === "Engineers") {
       addEngineers(); // Begins running through engineer adding
     } else addInterns(); // Begins running through intern adding
   });
 };
 
+// Function to add engineers
 const addEngineers = () => {
   inquirer.prompt(questions.engineer).then(answers => {
     // Creates a new engineer object using user input
@@ -46,7 +51,7 @@ const addEngineers = () => {
       answers.name,
       answers.id,
       answers.email,
-      answers.github
+      answers.github // Unique to Engineers
     );
     // Pushes the new engineer object to the storage array
     engineerArray.push(engineer);
@@ -54,6 +59,7 @@ const addEngineers = () => {
   });
 };
 
+// Function to add Interns
 const addInterns = () => {
   inquirer.prompt(questions.intern).then(answers => {
     // Creates a new intern object using user input
@@ -61,7 +67,7 @@ const addInterns = () => {
       answers.name,
       answers.id,
       answers.email,
-      answers.school
+      answers.school // Unique to interns
     );
     // Pushes the new intern object to the storage array
     internArray.push(intern);
@@ -69,6 +75,8 @@ const addInterns = () => {
   });
 };
 
+
+// Function handling the logic of what to do after the user answers the last question
 const next = str => {
   switch (str) {
     case "Engineer":
@@ -90,4 +98,4 @@ const next = str => {
   }
 };
 
-initialize();
+initialize(); // Begins the app functionality
