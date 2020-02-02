@@ -32,7 +32,7 @@ The app is structured to separate concerns into different files and only require
 |   |---Output.js => Handles file writing functionality
 |   |---Questions.js => Holds Inquirer questions
 |---Test => You may run tests with `npm run test` in your working directory. 
-            If you change file structure or class methods, tests may fail.
+|           If you change file structure or class methods, tests may fail.
 |   |---Employee.test.js => Jest unit tests for basic functionality. File writing is not tested.
 |   |---Enginer.test.js
 |   |---Intern.test.js
