@@ -1,7 +1,6 @@
 
-# refactored-potato
+# cli-team-profile
 Repo to hold CLI tool to generate team profile
-
 
 ## About This Tool
 
