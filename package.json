@@ -23,6 +23,6 @@
   "dependencies": {
     "inquirer": "^7.1.0",
     "jest": "^25.2.7",
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.6"
   }
 }
